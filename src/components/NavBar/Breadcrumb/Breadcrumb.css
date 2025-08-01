@@ -1,0 +1,68 @@
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+  font-family: 'Inter', sans-serif;
+}
+
+.breadcrumb-link {
+  background: none;
+  border: none;
+  color: #919191;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.breadcrumb-link:hover {
+  background-color: #242424;
+  color: #919191;
+}
+
+.breadcrumb-link.note-link {
+  color: #ffffff;
+  cursor: default;
+}
+
+.breadcrumb-link.note-link:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.breadcrumb-separator {
+  margin: 0 8px;
+  color: #666;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.breadcrumb-link.drag-over {
+  background-color: rgba(0, 123, 255, 0.2);
+  border: 2px dashed #007bff;
+  color: #007bff !important;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.breadcrumb-link.drag-over::after {
+  content: " (Drop here)";
+  font-size: 11px;
+  font-style: italic;
+  color: #007bff;
+}
+
+.breadcrumb-current-date {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px 0;
+}

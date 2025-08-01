@@ -1,0 +1,33 @@
+.navbar {
+  background-color: #101010;
+  border-bottom: 1px solid #242424;
+  padding: 0 20px;
+  height: 25px;
+  margin-left: 240px;
+  display: flex;
+  align-items: center;
+  position: fixed; /* Changed from relative to fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Increased z-index to stay above content */
+  -webkit-app-region: drag; /* Make navbar draggable on macOS */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-app-region: no-drag; /* Make content inside navbar not draggable */
+}
+
+/* Make individual interactive elements explicitly non-draggable */
+.navbar-content button,
+.navbar-content input,
+.navbar-content select,
+.navbar-content a {
+  -webkit-app-region: no-drag;
+}

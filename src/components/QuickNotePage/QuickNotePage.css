@@ -1,0 +1,64 @@
+.quick-note-page {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 160px;
+  padding: 0 15%;
+}
+
+.quick-note-header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.back-to-today-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #888;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+}
+
+.back-to-today-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.date-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  text-align: left;
+}
+
+.note-counter {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 40px 0;
+}
+
+/* Calendar section styles */
+.calendar-container {
+  margin-top: 20px;
+}
+
+.calendar-header h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+.order-selector {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.order-selector-button {
+  background-color: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+  min-width: 300px;
+  justify-content: space-between;
+}
+
+.order-selector-button:hover {
+  background-color: #333;
+  border-color: #555;
+}
+
+.order-text {
+  flex: 1;
+  text-align: left;
+}
+
+.dropdown-arrow {
+  color: #666;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.order-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 4px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.order-option {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 12px;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.order-option:hover {
+  background-color: #3c3c3c;
+}
+
+.order-option.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.order-option.selected:hover {
+  background-color: #0056b3;
+}

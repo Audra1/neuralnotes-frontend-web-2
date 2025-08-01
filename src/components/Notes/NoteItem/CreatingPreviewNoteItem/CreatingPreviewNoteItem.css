@@ -1,0 +1,69 @@
+.editing-note-item {
+  background-color: #2a2a2a;
+  border: 2px solid #007bff;
+}
+
+.note-title-input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.note-title-input::placeholder {
+  color: #666;
+}
+
+.note-description-input {
+  background: none;
+  border: none;
+  color: #797979;
+  font-size: 12px;
+  font-style: italic;
+  padding: 0;
+  outline: none;
+  width: 100%;
+}
+
+.note-description-input::placeholder {
+  color: #555;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.save-button,
+.cancel-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.save-button:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-button:hover {
+  background-color: #dc3545;
+  color: #fff;
+}

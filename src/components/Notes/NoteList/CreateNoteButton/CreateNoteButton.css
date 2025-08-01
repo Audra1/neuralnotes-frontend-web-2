@@ -1,0 +1,82 @@
+.note-form-card {
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.note-form-title {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  outline: none;
+  resize: none;
+}
+
+.note-form-title::placeholder {
+  color: #666;
+}
+
+.note-form-description {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 14px;
+  padding: 8px 0;
+  margin-bottom: 12px;
+  outline: none;
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+.note-form-description::placeholder {
+  color: #666;
+}
+
+.note-form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.CreateNoteButton {
+  background-color: transparent;
+  margin-top: 10px;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.CreateNoteButton:hover {
+  background-color: transparent;
+}
+
+.CancelButton {
+  background: none;
+  color: #999;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.CancelButton:hover {
+  background-color: #333;
+  color: #fff;
+}

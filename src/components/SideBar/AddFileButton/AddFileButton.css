@@ -1,0 +1,36 @@
+.new-file-button {
+  background: none;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #999;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-bottom: 8px;
+  width: 90px;
+  height: 24px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.new-file-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #666;
+}
+
+.new-file-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.new-file-button:disabled:hover {
+  background-color: transparent;
+  color: #999;
+  border-color: #555;
+}

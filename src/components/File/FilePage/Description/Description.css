@@ -1,0 +1,309 @@
+.description-display {
+  width: 100%;
+  min-height: 21px;
+  cursor: text;
+  padding: 0;
+}
+
+.description-placeholder {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-style: italic;
+}
+
+.description-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4px;
+  min-height: 24px;
+}
+
+.description-block:last-child {
+  margin-bottom: 0;
+}
+
+.description-block.display-block {
+  padding: 2px 0;
+}
+
+.description-block.edit-block {
+  position: relative;
+  padding: 4px 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.description-block.edit-block:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.description-block.edit-block.drag-over {
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px dashed #007bff;
+}
+
+.drag-handle {
+  width: 20px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: #666;
+  font-size: 12px;
+  line-height: 1;
+  margin-right: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.description-block.edit-block:hover .drag-handle {
+  opacity: 1;
+}
+
+.bullet-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.block-content {
+  color: #d9d9d9;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  flex: 1;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.block-input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  line-height: 1.5;
+  flex: 1;
+  min-height: 24px;
+}
+
+.block-input::placeholder {
+  color: #666;
+}
+
+.block-input:focus {
+  outline: none;
+}
+
+.description-block.bullet .block-input {
+  margin-left: 0;
+}
+
+.description-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.save-button,
+.cancel-button {
+  background: none;
+  border: 1px solid #555;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.save-button:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* Drop zone indicators */
+.description-block.drag-over::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 1px;
+}
+
+.description-editor.live-editor {
+  width: 100%;
+  min-height: 21px;
+}
+
+.description-block.live-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2px;
+  min-height: 28px;
+  position: relative;
+  padding: 2px 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: text;
+}
+
+.description-block.live-block:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.description-block.live-block.editing-selecting {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.description-block.live-block.drag-over {
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px dashed #007bff;
+}
+
+.drag-handle {
+  width: 20px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: #666;
+  font-size: 12px;
+  line-height: 1;
+  margin-right: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.description-block.live-block:hover .drag-handle {
+  opacity: 1;
+}
+
+.bullet-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.block-content-editable {
+  flex: 1;
+  min-height: 24px;
+  padding: 4px 0;
+  color: #d9d9d9;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  border: none;
+  background: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.block-content-editable:focus {
+  outline: none !important;
+  color: #fff;
+}
+
+.block-content-editable:empty:before {
+  content: attr(data-placeholder);
+  color: #666;
+  font-style: italic;
+  pointer-events: none;
+  position: absolute;
+}
+
+.block-content-editable:focus:empty:before {
+  color: #888;
+}
+
+.description-block.live-block.bullet .block-content-editable {
+  margin-left: 0;
+}
+
+.description-block.live-block.paragraph .block-content-editable {
+  margin-left: 0;
+}
+
+.description-block.drag-over::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 1px;
+}
+
+.block-content-editable::selection {
+  background-color: rgba(74, 158, 255, 0.3);
+}
+
+.block-content-editable::-moz-selection {
+  background-color: rgba(74, 158, 255, 0.3);
+}
+
+.description-block.live-block * {
+  transition: color 0.2s ease;
+}
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 1px;
+}
+
+/* Selection and focus states */
+.block-content-editable::selection {
+  background-color: rgba(74, 158, 255, 0.3);
+}
+
+.block-content-editable::-moz-selection {
+  background-color: rgba(74, 158, 255, 0.3);
+}
+
+/* Prevent outline on contenteditable */
+.block-content-editable:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Smooth transitions */
+.description-block.live-block * {
+  transition: color 0.2s ease;
+}

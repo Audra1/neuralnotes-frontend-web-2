@@ -1,0 +1,270 @@
+/* Quick Notes Context Overrides */
+.quick-notes-list .note-item-container.quick-note-context {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Priority line styling */
+.note-item-container.quick-note-context.with-priority {
+  padding-left: 30px;
+}
+
+.quick-note-context .priority-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -8px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.quick-note-context .priority-line-segment {
+  width: 1px;
+  background-color: #505050;
+  flex: 1;
+  position: relative;
+}
+
+.quick-note-context .priority-line-segment.first-item {
+  background: linear-gradient(to bottom, transparent 50%, #505050 50%);
+}
+
+.quick-note-context .priority-line-segment.last-item {
+  background: linear-gradient(to bottom, #505050 50%, transparent 50%);
+  margin-bottom: 8px;
+}
+
+.quick-note-context .priority-line-segment:not(.first-item):not(.last-item) {
+  background-color: #505050;
+}
+
+.quick-note-context .priority-circle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #505050;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.quick-note-context .priority-circle:hover {
+  background-color: #606060;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.quick-note-context .priority-number {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+  display: none;
+}
+
+/* Main difference: Quick notes have a slightly different background */
+.quick-notes-list .note-item.quick-note-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(45, 45, 45, 0.4) !important; /* Force immediate application */
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+  text-align: left;
+  cursor: move;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.quick-notes-list .note-item.quick-note-item:hover {
+  border: 1px solid #404040 !important;
+  background-color: rgba(60, 60, 60, 0.5) !important;
+}
+
+.note-item.quick-note-item.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+  z-index: 1000;
+}
+
+/* Drag over visual feedback - only during active drag */
+.note-item.quick-note-item.parent-drop {
+  background-color: rgba(0, 123, 255, 0.2);
+  border: 2px dashed #007bff;
+  transform: scale(1.02);
+}
+
+.note-item.quick-note-item.parent-drop .note-title::after {
+  content: " (Drop to make child)";
+  color: #007bff;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Multiple delete selection styling */
+.note-item.quick-note-item.selected-for-delete {
+  background-color: rgba(220, 53, 69, 0.3);
+  border: 1px solid #dc3545;
+}
+
+.note-item.quick-note-item.selected-for-delete:hover {
+  background-color: rgba(220, 53, 69, 0.4);
+  border: 1px solid #dc3545;
+}
+
+/* All other styles remain the same */
+.quick-note-context .note-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.quick-note-context .note-icon-star {
+  width: 9px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.quick-note-context .note-icon-placeholder {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.quick-note-context .note-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.quick-note-context .note-title {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: #fff !important;
+  text-align: left;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.quick-note-context .clickable-title {
+  color: #fff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.quick-note-context .clickable-title:hover {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.quick-note-context .note-description {
+  font-size: 14px;
+  color: #797979;
+  font-style: italic;
+  text-align: left;
+  width: 100%;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* Children Preview Styles */
+.quick-note-context .children-preview {
+  background-color: #292929;
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin-top: 4px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.quick-note-context .child-preview-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.quick-note-context .child-preview-item:last-child {
+  margin-bottom: 0;
+}
+
+.quick-note-context .child-preview-star {
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.quick-note-context .child-preview-title {
+  font-size: 12px;
+  color: #bbb;
+  font-weight: 400;
+  white-space: nowrap;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.quick-note-context .menu-button {
+  margin-left: auto;
+  background: none;
+  color: #797979;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+  align-self: flex-start;
+}
+
+.quick-note-context .menu-button:hover {
+  color: #dc3545;
+}
+
+/* Pin indicator styling */
+.quick-note-context .pin-indicator {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  animation: pinGlow 2s ease-in-out infinite;
+}
+
+@keyframes pinGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}

@@ -1,0 +1,93 @@
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 0;
+}
+
+.empty-state {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.loading {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+}
+
+.EventsList {
+  position: relative;
+  margin-top: 30px;
+}
+
+/* Events content container */
+.events-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Completed section styling */
+.completed-section {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #242424;
+}
+
+.completed-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 12px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.completed-events {
+  opacity: 0.7;
+}
+
+.completed-events .event-item {
+  background-color: #171717;
+}
+
+/* Drop zones between notes */
+.drop-zone {
+  height: 2px;
+  margin: 1px 16px;
+  border-radius: 1px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  background-color: transparent;
+}
+
+/* Larger drop zones during drag mode - bigger hitbox */
+.drop-zone.drag-mode {
+  height: 12px;
+  margin: 6px 16px;
+  border-radius: 6px;
+  background-color: transparent;
+  opacity: 1;
+  border: 1px dashed rgba(0, 123, 255, 0.3);
+}
+
+/* Blue highlighting only when actively being dragged over */
+.drop-zone.active {
+  height: 12px;
+  background-color: #007bff !important;
+  opacity: 1 !important;
+  border: 2px solid #007bff !important;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
